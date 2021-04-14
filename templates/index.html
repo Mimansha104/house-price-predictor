@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Predictor</title>
+</head>
+<style type="text/css">
+    body{
+         background-image:url('https://goodhomes.wwmindia.com/content/2019/dec/saini--51576841810.jpg');
+         background-size:cover;
+    }
+</style>
+<body>
+
+     <h1><b>HOUSE PRICE PREDICTOR</b> </h1>
+     <h2><u>Fill your house info here</u></h2>
+       <form action="/predict" method="post">
+           <label><b>Location</b></label><br>
+           <select name="location">
+               {% for i in location %}
+                   <option value="{{i}}">{{i}}</option>
+               {% endfor %}
+           </select><br><br>
+
+
+           <label><b>Total Squarefeet</b> </label><br>
+           <input type="number"  name="total_sqft"><br><br>
+
+           <label><b>Area Type</b></label><br>
+            <input type="radio" name="area_type" value="Super built-up  Area">Super built-up  Area
+            <input type="radio" name="area_type" value="Built-up  Area">Built-up  Area
+            <input type="radio" name="area_type" value="Plot  Area">Plot  Area
+            <input type="radio" name="area_type" value="Carpet  Area">Carpet  Area<br><br>
+
+           <label><b>Size(BHK)</b></label><br>
+           <input type="number"  name="size"><br><br>
+
+           <label><b>Bath</b></label><br>
+           <input type="number"  name="bath"><br><br>
+
+           <label><b>Balcony</b></label><br>
+           <input type="radio" name="balcony" value="0">0
+           <input type="radio" name="balcony" value="1">1
+           <input type="radio" name="balcony" value="2">2
+           <input type="radio" name="balcony" value="3">3<br><br>
+
+           <input type="submit"  value=" Calculate Price in lakhs">
+
+
+
+
+
+
+
+
+       </form>
+
+</body>
+</html>
